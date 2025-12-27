@@ -29,9 +29,17 @@ header {
 
 }
 
-/* Font Style for */
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Font Style for logo*/
 h1 {
     font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
 }
 
 /* Main content */
