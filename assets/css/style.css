@@ -1,20 +1,20 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Asterisk wildcard selectror to overide default styles added by the brower */
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-/*General styles*/
+/* General styles */
 body {
-    min-height : 100vh;
-    display: flex;  
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
     /* Generic project styles */
-    color:#3a3a3a;
+    color: #3a3a3a;
     font-family: 'Lato', sans-serif;
 }
 
@@ -26,7 +26,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -34,7 +36,6 @@ header a {
     color: inherit;
 }
 
-/* Font Style for logo*/
 h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -45,11 +46,13 @@ h1 {
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
-    list-style-type:none;
+    list-style-type: none;
 }
-#menu li {
+
+#menu > li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
@@ -57,19 +60,36 @@ h1 {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color:#ffffff
+    background-color: #ffffff;
     width: 100%;
     left: 0;
-    padding: 0 1rem;    
+    padding: 0 1rem;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
 }
 
 /* Main content */
 main {
     background-color: lightblue;
-    /*Make main element take up all available space */
+    /* Make main element take up any surplus space to push footer down */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
+
 /* Footer */
 footer {
     background-color: orange;
